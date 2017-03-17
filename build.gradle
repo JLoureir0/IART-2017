@@ -56,4 +56,4 @@ pmd {
 }
 
 // Define the main class for the application
-mainClassName = 'Deliverify'
+mainClassName = 'deliverify.Deliverify'
