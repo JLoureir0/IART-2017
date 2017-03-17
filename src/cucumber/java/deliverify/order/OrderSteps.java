@@ -46,43 +46,19 @@ public class OrderSteps {
     order = new Order(orderCustomer, orderDeliveryPoint, orderValue, orderVolume);
   }
 
-  @When("^I retrieve the order's customer$")
-  public void iRetrieveTheOrderSCustomer() throws Throwable {
-    retrievedOrderCustomer = order.getCustomer();
-  }
-
-  @Then("^it must be the right customer$")
-  public void itMustBeTheRightCustomer() throws Throwable {
-    assertEquals(retrievedOrderCustomer, orderCustomer);
-  }
-
-  @When("^I retrieve the order's delivery point$")
-  public void iRetrieveTheOrderSDeliveryPoint() throws Throwable {
+  @When("^I retrieve that order's information$")
+  public void iRetrieveThatOrderSInformation() throws Throwable {
+    retrievedOrderCustomer      = order.getCustomer();
     retrievedOrderDeliveryPoint = order.getDeliveryPoint();
+    retrievedOrderValue         = order.getValue();
+    retrievedOrderVolume        = order.getVolume();
   }
 
-  @Then("^it must be the right delivery point$")
-  public void itMustBeTheRightDeliveryPoint() throws Throwable {
+  @Then("^it must be correct$")
+  public void itMustBeTheRightCorrect() throws Throwable {
+    assertEquals(retrievedOrderCustomer, orderCustomer);
     assertEquals(retrievedOrderDeliveryPoint, orderDeliveryPoint);
-  }
-
-  @When("^I retrieve the order's value$")
-  public void iRetrieveTheOrderSValue() throws Throwable {
-    retrievedOrderValue = order.getValue();
-  }
-
-  @Then("^it must be the right value$")
-  public void itMustBeTheRightValue() throws Throwable {
     assertEquals(retrievedOrderValue, orderValue, ADMISSIBLE_ERROR);
-  }
-
-  @When("^I retrieve the order's volume$")
-  public void iRetrieveTheOrderSVolume() throws Throwable {
-    retrievedOrderVolume = order.getVolume();
-  }
-
-  @Then("^it must be the right volume$")
-  public void itMustBeTheRightVolume() throws Throwable {
     assertEquals(retrievedOrderVolume, orderVolume, ADMISSIBLE_ERROR);
   }
 
