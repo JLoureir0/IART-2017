@@ -1,10 +1,10 @@
-package deliverify.steps.order;
+package deliverify.steps.textil.order;
 
 import cucumber.api.java.en.*;
 
 import static org.junit.Assert.*;
 
-import deliverify.order.Order;
+import deliverify.textil.order.Order;
 
 public class OrderSteps {
 

@@ -1,4 +1,4 @@
-package deliverify.order;
+package deliverify.textil.order;
 
 public class Order {
 
