@@ -1,4 +1,4 @@
-package deliverify.api.tree;
+package deliverify.api.tree.node;
 
 import java.util.ArrayList;
 

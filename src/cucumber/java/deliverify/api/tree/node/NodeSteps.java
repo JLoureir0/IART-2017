@@ -1,4 +1,4 @@
-package deliverify.steps.api.tree;
+package deliverify.steps.api.tree.node;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ import cucumber.api.java.en.*;
 
 import static org.junit.Assert.*;
 
-import deliverify.api.tree.Node;
+import deliverify.api.tree.node.Node;
 
 public class NodeSteps {
 
