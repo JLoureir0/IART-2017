@@ -1,37 +1,42 @@
 package deliverify.api.tree;
 
+import java.util.ArrayList;
 
-public class Node {
+public class Node<T> {
 
-  private int x;
-  private int y;
+  private T data;
+  private Node<T> parent;
+  private ArrayList<Node<T>> children;
 
-  private int cost;
+  public Node(T data) {
 
-  public Node(int x, int y) {
-
-    this.x = x;
-    this.y = y;
+    this.data = data;
+    this.children = new ArrayList<Node<T>>();
   }
 
-  public int getX() {
+  public T getData() {
 
-    return x;
+    return data;
   }
 
-  public int getY() {
+  public Node<T> getParent() {
 
-    return y;
+    return parent;
   }
 
-  public void setCost(int cost) {
+  public ArrayList<Node<T>> getChildren() {
 
-    this.cost = cost;
+    return children;
   }
 
-  public int getCost() {
+  public Node<T> addChild(T childData) {
 
-    return cost;
+    Node<T> childNode = new Node<T>(childData);
+    childNode.parent  = this;
+
+    this.children.add(childNode);
+
+    return childNode;
   }
 
 }
